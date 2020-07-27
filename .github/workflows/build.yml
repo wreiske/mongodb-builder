@@ -1,0 +1,6 @@
+# action.yml
+name: 'Build Meteor Mongo'
+description: 'Start a docker container and build meteor mongo'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

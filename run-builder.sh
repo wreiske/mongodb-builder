@@ -8,7 +8,7 @@ BIN="$TARGET/bin"
 
 [ ! -d $SRC ] && curl "https://fastdl.mongodb.org/src/$SRC.tar.gz" | tar -xz
 
-apt install -y python3-devel python3-scons
+sudo apt install -y python3-devel python3-scons
 pip3 install -r etc/pip/compile-requirements.txt
 
 ./buildscripts/scons.py \

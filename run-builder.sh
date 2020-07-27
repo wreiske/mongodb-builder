@@ -22,8 +22,8 @@ pip3 install -r etc/pip/compile-requirements.txt
 
 #strip mongo mongod
 
-echo "This is a test mongo" > mongo
-echo "This is a test mongod" > mongo
+echo "This is a test mongo" > $SRC/mongo
+echo "This is a test mongod" > $SRC/mongod
 
 mkdir -p $BIN
 mv "$SRC/mongo" "$SRC/mongod" $BIN

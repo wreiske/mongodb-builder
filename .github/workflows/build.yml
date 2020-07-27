@@ -2,6 +2,7 @@
 name: Build Meteor Mongo from SRC
 
 on:
+  push:
   workflow_dispatch:
   release:
     types: [created]

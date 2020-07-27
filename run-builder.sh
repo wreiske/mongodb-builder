@@ -22,8 +22,14 @@ pip3 install -r etc/pip/compile-requirements.txt
 
 #strip mongo mongod
 
-echo "This is a test mongo" > $SRC/mongo
-echo "This is a test mongod" > $SRC/mongod
+echo "before"
+pwd
+ls -lah
+
+echo "This is a test mongo" > mongo
+echo "This is a test mongod" > mongod
+
+echo "after"
 
 pwd
 ls -lah

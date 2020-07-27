@@ -34,8 +34,9 @@ echo "after"
 pwd
 ls -lah
 
-mkdir -p $BIN
-mv "$SRC/mongo" "$SRC/mongod" $BIN
+mkdir -p ../$BIN
+mv "mongo" "mongod" ../$BIN
+cd ../$BIN
 tar -czf "$TARGET.tgz" $TARGET
 
 

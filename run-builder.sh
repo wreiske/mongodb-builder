@@ -12,15 +12,18 @@ cd "$SRC"
 pip3 install scons
 pip3 install -r etc/pip/compile-requirements.txt
 
-./buildscripts/scons.py \
-  mongod mongo \
-  --ssl=off \
-  --enable-free-mon=off \
-  LINKFLAGS='-static-libstdc++' \
-  CC=gcc-8 \
-  CXX=g++-8
+#./buildscripts/scons.py \
+#  mongod mongo \
+#  --ssl=off \
+#  --enable-free-mon=off \
+#  LINKFLAGS='-static-libstdc++' \
+#  CC=gcc-8 \
+#  CXX=g++-8
 
-strip mongo mongod
+#strip mongo mongod
+
+echo "This is a test mongo" > mongo
+echo "This is a test mongod" > mongo
 
 mkdir -p $BIN
 mv "$SRC/mongo" "$SRC/mongod" $BIN

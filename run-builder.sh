@@ -11,8 +11,8 @@ mkdir -p $BIN
 mv "$SRC/mongo" "$SRC/mongod" $BIN
 tar -czf "$TARGET.tgz" $TARGET
 
-set -e
 cd /mongodb
+apt install -y python3-devel python3-scons
 pip3 install -r etc/pip/compile-requirements.txt
 
 ./buildscripts/scons.py \

@@ -17,7 +17,7 @@ pip3 install -r etc/pip/compile-requirements.txt
   --ssl=off \
   --enable-free-mon=off \
   LINKFLAGS='-static-libstdc++' \
-  CC=gcc \
-  CXX=g++
+  CC=gcc-8 \
+  CXX=g++-8
 
 strip mongo mongod

@@ -7,6 +7,7 @@ TARGET="mongodb-linux-x86_64-${MONGODB_VERSION}"
 BIN="$TARGET/bin"
 
 [ ! -d $SRC ] && curl "https://fastdl.mongodb.org/src/$SRC.tar.gz" | tar -xz
+ls -lah
 mkdir -p $BIN
 mv "$SRC/mongo" "$SRC/mongod" $BIN
 tar -czf "$TARGET.tgz" $TARGET

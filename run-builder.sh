@@ -8,6 +8,7 @@ BIN="$TARGET/bin"
 
 [ ! -d $SRC ] && curl "https://fastdl.mongodb.org/src/$SRC.tar.gz" | tar -xz
 
+cd "$SRC"
 pip3 install scons
 pip3 install -r etc/pip/compile-requirements.txt
 

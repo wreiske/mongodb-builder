@@ -22,21 +22,15 @@ pip3 install -r etc/pip/compile-requirements.txt
 
 #strip mongo mongod
 
-echo "before"
-pwd
-ls -lah
-
 echo "This is a test mongo" > mongo
 echo "This is a test mongod" > mongod
-
-echo "after"
-
-pwd
-ls -lah
 
 mkdir -p ../$BIN
 mv "mongo" "mongod" ../$BIN
 cd ../
 tar -czf "$TARGET.tgz" $BIN
+
+pwd
+ls -lah
 
 

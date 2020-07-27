@@ -25,6 +25,11 @@ pip3 install -r etc/pip/compile-requirements.txt
 echo "This is a test mongo" > $SRC/mongo
 echo "This is a test mongod" > $SRC/mongod
 
+pwd
+ls -lah
+
 mkdir -p $BIN
 mv "$SRC/mongo" "$SRC/mongod" $BIN
 tar -czf "$TARGET.tgz" $TARGET
+
+

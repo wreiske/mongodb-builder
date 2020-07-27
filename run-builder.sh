@@ -21,3 +21,7 @@ pip3 install -r etc/pip/compile-requirements.txt
   CXX=g++-8
 
 strip mongo mongod
+
+mkdir -p $BIN
+mv "$SRC/mongo" "$SRC/mongod" $BIN
+tar -czf "$TARGET.tgz" $TARGET

@@ -1,6 +1,16 @@
 # action.yml
-name: 'Build Meteor Mongo'
-description: 'Start a docker container and build meteor mongo'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
+name: Build Meteor Mongo from SRC
+
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@2
+      - name: Run builder
+        run: ./run-builder.sh

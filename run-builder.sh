@@ -26,3 +26,4 @@ mkdir -p ../$BIN
 mv "mongo" "mongod" ../$BIN
 cd ../
 tar -czf "$TARGET.tgz" $BIN
+

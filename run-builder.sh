@@ -37,6 +37,6 @@ ls -lah
 mkdir -p ../$BIN
 mv "mongo" "mongod" ../$BIN
 cd ../$BIN
-tar -czf "$TARGET.tgz" $TARGET
+tar -czf "$TARGET.tgz" ../$BIN
 
 

@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+dpkg --list | grep compiler
+
+exit
+
+
 MONGODB_VERSION='4.2.8'
 SRC="mongodb-src-r$MONGODB_VERSION"
 TARGET="mongodb-linux-x86_64-${MONGODB_VERSION}"

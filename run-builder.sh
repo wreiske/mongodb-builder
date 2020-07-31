@@ -12,15 +12,17 @@ cd "$SRC"
 pip3 install scons
 pip3 install -r etc/pip/compile-requirements.txt
 
-LD_LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/libstdc++.so ./buildscripts/scons.py \
+LD_LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/libstdc++.so 
+./buildscripts/scons.py \
   mongod mongo \
   --ssl=off \
   --enable-free-mon=off \
   --link-model=object \
   --disable-minimum-compiler-version-enforcement \
-  LINKFLAGS='-static-libstdc++' \
+  LINKFLAGS='-static-libstdc++ -std=c++11' \
   CC=gcc-4.8 \
-  CXX=g++-4.8
+  CXX=g++-4.8 \
+  
 
 strip mongo mongod
 

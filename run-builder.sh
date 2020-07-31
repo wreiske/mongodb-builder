@@ -19,7 +19,8 @@ LD_LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/libstdc++.so
   --enable-free-mon=off \
   --link-model=object \
   --disable-minimum-compiler-version-enforcement \
-  LINKFLAGS='-static-libstdc++ -std=c++11' \
+  --cxx-std=11 \
+  LINKFLAGS='-static-libstdc++' \
   CC=gcc-4.8 \
   CXX=g++-4.8 \
   

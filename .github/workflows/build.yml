@@ -2,6 +2,7 @@
 name: Build Meteor Mongo from SRC
 
 on:
+  push:
   release:
     types: [created]
 

@@ -1,11 +1,6 @@
 #!/bin/bash
 set -e
 
-apt-cache search Compiler | grep gcc
-
-exit
-
-
 MONGODB_VERSION='4.2.8'
 SRC="mongodb-src-r$MONGODB_VERSION"
 TARGET="mongodb-linux-x86_64-${MONGODB_VERSION}"
@@ -22,8 +17,8 @@ pip3 install -r etc/pip/compile-requirements.txt
   --ssl=off \
   --enable-free-mon=off \
   LINKFLAGS='-static-libstdc++' \
-  CC=gcc-8 \
-  CXX=g++-8
+  CC=gcc-4.8 \
+  CXX=g++-4.8
 
 strip mongo mongod
 

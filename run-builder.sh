@@ -12,7 +12,7 @@ cd "$SRC"
 pip3 install scons
 pip3 install -r etc/pip/compile-requirements.txt
 
-./buildscripts/scons.py \
+CXX=g++-4.8 CC=gcc-4.8 ./buildscripts/scons.py \
   mongod mongo \
   --ssl=off \
   --enable-free-mon=off \

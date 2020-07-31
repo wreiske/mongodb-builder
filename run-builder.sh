@@ -16,6 +16,8 @@ pip3 install -r etc/pip/compile-requirements.txt
   mongod mongo \
   --ssl=off \
   --enable-free-mon=off \
+  --link-model=objects \
+  --disable-minimum-compiler-version-enforcement \
   LINKFLAGS='-static-libstdc++' \
   CC=gcc-4.8 \
   CXX=g++-4.8

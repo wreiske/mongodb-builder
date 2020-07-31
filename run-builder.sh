@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-dpkg --list | grep compiler
+apt-cache search Compiler | grep gcc
 
 exit
 
